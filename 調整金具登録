@@ -1,0 +1,17 @@
+| STT | Chức năng / Yêu cầu                                                                                      | Đã làm được | Chưa làm được | API/Mutation sử dụng                       |
+|-----|----------------------------------------------------------------------------------------------------------|:-----------:|:-------------:|--------------------------------------------|
+| 1   | Lấy thông tin調整金具 (phụ kiện điều chỉnh) khi vào màn hình (theo order_no)                              |             |       ✔       | getAdjustmentFitting                       |
+| 2   | Hiển thị備考 (remark) từ調整金具                                                                           |             |       ✔       | getAdjustmentFitting                       |
+| 3   | Nếu không có dữ liệu, disable toàn bộ control (trừ double click mở file)                                 |             |       ✔       | -                                          |
+| 4   | Lấy danh sách調整金具明細 (chi tiết phụ kiện) theo order_no                                                |             |       ✔       | getAdjustmentFittingDetails                |
+| 5   | Hiển thị bảng chi tiết: No, 添付ファイル名, 添付ファイルパス, 登録日                                       |             |       ✔       | getAdjustmentFittingDetails                |
+| 6   | Double click vào file mở file (nếu control disable)                                                      |             |       ✔       | -                                          |
+| 7   | Upload file đính kèm mới (chọn file, upload, nhận lại file_name, absolute_path, set ngày)                |             |       ✔       | uploadAdjustmentFittingDetailFile          |
+| 8   | Thêm 1 dòng mới vào bảng file đính kèm (UI, No = max + 1)                                                |             |       ✔       | -                                          |
+| 9   | Đăng ký chi tiết file đính kèm (createAdjustmentFittingDetail)                                           |             |       ✔       | createAdjustmentFittingDetail              |
+| 10  | Xóa 1 dòng file đính kèm (confirm, xóa UI, gọi deleteAdjustmentFittingDetail)                            |             |       ✔       | deleteAdjustmentFittingDetail              |
+| 11  | Đăng ký/Update remark (備考) của調整金具 (create/updateAdjustmentFitting)                                 |             |       ✔       | createAdjustmentFitting / updateAdjustmentFitting |
+| 12  | Hiển thị message "登録が完了しました" khi đăng ký xong, đóng màn hình, reload list                         |             |       ✔       | -                                          |
+| 13  | Xóa toàn bộ調整金具 (confirm, gọi deleteAdjustmentFitting, deleteAdjustmentFittingDetail)                |             |       ✔       | deleteAdjustmentFitting / deleteAdjustmentFittingDetail |
+| 14  | Hiển thị message "全削除が完了しました" khi xóa toàn bộ, đóng màn hình, reload list                        |             |       ✔       | -                                          |
+| 15  | Xử lý lỗi: không có data, lỗi API, hiển thị message phù hợp                                               |             |       ✔       | -                                          |
